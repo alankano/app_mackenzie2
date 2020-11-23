@@ -1,0 +1,680 @@
+<MyMainWidget>:
+    Menu:
+        name: 'menu'
+    Introducao1:
+        name : 'introducao1'
+    Introducao2:
+        name : 'introducao2'
+    Introducao3:
+        name : 'introducao3'
+    Introducao4:
+        name : 'introducao4'
+    Calculadora:
+        name : 'calculadora'
+    Exercicios:
+        name: 'exercicios'
+    Prova1 : 
+        name : 'prova1'
+    Prova2 : 
+        name : 'prova2'
+    Prova3 : 
+        name : 'prova3'
+    Prova4 : 
+        name : 'prova4'
+    Prova5 : 
+        name : 'prova5'
+    Correcao1:
+        name : 'correcao1'
+    Correcao2:
+        name : 'correcao2'
+    Correcao3:
+        name : 'correcao3'
+    Correcao4:
+        name : 'correcao4'
+    Correcao5:
+        name : 'correcao5'
+
+<Menu>:
+    BoxLayout:
+        orientation:'vertical'
+        padding : 100
+        spacing : 50
+        canvas :
+            Color : 
+                rgba : 1, 1, 1, 1
+            Rectangle :
+                size: self.size
+                pos : self.pos
+        Image : 
+            source : 'logo_mackenzie.png'
+            pos_hint : {"center_x": 0.5, "center_y": 0.5}
+            height: 100
+        MDRoundFlatButton :
+            text: 'Introdução a equação de segundo grau.'
+            on_release: app.root.current = 'introducao1'
+            pos_hint : {"center_x": 0.5, "center_y": 0.5}
+            theme_text_color : "Primary"
+            text_color: 0,0,1,1
+        MDRoundFlatButton : 
+            text :'Calculadora'
+            on_release: app.root.current = 'calculadora'
+            pos_hint : {"center_x": 0.5, "center_y": 0.5}
+            theme_text_color : "Primary"
+            text_color: 0,0,1,1
+        MDRoundFlatButton :
+            text: 'Exercícios'
+            on_release: app.root.current = 'exercicios'
+            pos_hint : {"center_x": 0.5, "center_y": 0.5}
+            text_color: 0,0,1,1
+
+<Introducao1>:
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Introdução a equação do segundo grau"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'introducao2'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'introducao3'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'introducao4'
+            MDIconButton:
+                icon: "calculator"
+                on_release : app.root.current = 'calculadora'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'   
+
+        BoxLayout:
+            orientation:'vertical'
+            padding : 10,10,10,10
+            spacing: dp(10)
+            MDLabel:
+                text_size: self.width - 10, None
+                height : self.texture_size[1]
+                text: root.string_intro
+
+<Introducao2>:
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Introdução a equação do segundo grau"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'introducao3'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'introducao4'
+            MDIconButton:
+                icon: "calculator"
+                on_release : app.root.current = 'calculadora'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'   
+
+        BoxLayout:
+            orientation:'vertical'
+            padding : 10,10,10,10
+            spacing: dp(10)
+            MDLabel:
+                text_size: self.width - 10, None
+                height : self.texture_size[1]
+                text: root.string_intro
+
+<Introducao3>:
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Introdução a equação do segundo grau"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'introducao2'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'introducao4'
+            MDIconButton:
+                icon: "calculator"
+                on_release : app.root.current = 'calculadora'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'   
+
+        BoxLayout:
+            orientation:'vertical'
+            padding : 10,10,10,10
+            spacing: dp(10)
+            MDLabel:
+                text_size: self.width - 10, None
+                height : self.texture_size[1]
+                text: root.string_intro
+
+<Introducao4>:
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Introdução a equação do segundo grau"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'introducao2'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'introducao3'
+            MDIconButton:
+                icon: "calculator"
+                on_release : app.root.current = 'calculadora'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'   
+
+        BoxLayout:
+            orientation:'vertical'
+            padding : 10,10,10,10
+            spacing: dp(10)
+            MDLabel:
+                text_size: self.width - 10, None
+                height : self.texture_size[1]
+                text: root.string_intro
+
+
+<Calculadora>:
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : 'Calculadora de equa\u00E7\u00E3o do segundo grau'
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+    
+            MDIconButton:
+                icon: "book"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'   
+
+        MDLabel:
+            text: "Calculadora de equa\u00E7\u00E3o do segundo grau : 0 = ax\u00B2 + bx + c"
+            halign: "center"
+
+        BoxLayout:
+            orientation:'vertical'
+            spacing : '30dp'
+            MDLabel : 
+                pos_hint : {"center_x": 0.5, "center_y": 0.5}
+                id : calculadora_label
+                text : root.resposta
+                halign: 'center'
+            MDTextField :
+                hint_text : 'a'
+                size_hint : 0.15, None
+                pos_hint : {"center_x": 0.5, "center_y": 0.5}
+                required : True
+                id :variavel_a
+                max_text_length : 4
+                normal_color : 1,1,1,1
+                input_filter : 'int'
+            MDTextField :
+                hint_text : 'b'
+                size_hint : 0.15, None
+                pos_hint : {"center_x": 0.5, "center_y": 0.5}
+                required : True
+                id : variavel_b    
+                max_text_length : 4
+                normal_color : 1,1,1,1
+                input_filter : 'int'
+            MDTextField :
+                hint_text : 'c'
+                size_hint : 0.15, None
+                pos_hint : {"center_x": 0.5, "center_y": 0.5}
+                required : True
+                id : variavel_c
+                max_text_length : 4
+                normal_color : 1,1,1,1
+                input_filter : 'int'
+            MDRoundFlatButton : 
+                text :'Calcular'
+                on_release: root.calcular()
+                pos_hint : {"center_x": 0.5, "center_y": 0.5}
+                theme_text_color : "Primary"
+                text_color: 0,0,1,1
+
+<Exercicios>:
+    on_pre_enter: root.criando_exercicios()
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            left_action_items : [["arrow-left", lambda x : root.voltar()]] 
+
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel: 
+                padding_x : 20
+                halign: 'center'
+                text: 'Nesta se\u00E7\u00E3o voc\u00EA far\u00E1 5 exerc\u00EDcios seguidos sem poder acessar o material e nem a calculadora. Est\u00E1 pronto para come\u00E7ar ?'
+            FloatLayout:
+                orientation: 'horizontal'
+
+                MDRoundFlatButton:
+                    text: "Come\u00E7ar exerc\u00EDcios."
+                    pos : (150,50)
+                    on_release : app.root.current ='prova1'
+
+                MDRoundFlatButton:
+                    text: "Estudar mais um pouco."
+                    pos : (450,50)
+                    on_release : app.root.current = 'introducao1'
+
+
+<Prova1>:        
+    on_pre_enter : root.comecando_exercicios()
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Desistir"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+        FloatLayout:
+            spacing : '20dp'
+            MDLabel :
+                pos_hint : {'center_x' : 0.5, 'center_y' : 0.9 }
+                halign : 'center'
+                height : self.texture_size[1]
+                id: prova1_enunciado
+            MDRaisedButton : 
+                id : prova1_alternativa1
+                on_release: root.salvando_os_dados_do_usuario('a')
+                pos : (350, 350)
+            MDRaisedButton : 
+                id: prova1_alternativa2
+                on_release: root.salvando_os_dados_do_usuario('b')
+                pos : (350, 300)
+            MDRaisedButton : 
+                id: prova1_alternativa3
+                on_release: root.salvando_os_dados_do_usuario('c')
+                pos : (350, 250)
+            MDRaisedButton : 
+                id: prova1_alternativa4
+                on_release: root.salvando_os_dados_do_usuario('d')
+                pos : (350, 200)
+            MDRaisedButton : 
+                id: prova1_alternativa5
+                on_release: root.salvando_os_dados_do_usuario('e')
+                pos : (350, 150)
+
+<Prova2>:
+    on_pre_enter : root.comecando_exercicios()
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Desistir"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+        FloatLayout:
+            spacing : '20dp'
+            MDLabel :
+                pos_hint : {'center_x' : 0.5, 'center_y' : 0.9 }
+                halign : 'center'
+                height : self.texture_size[1]
+                id: prova2_enunciado
+            MDRaisedButton : 
+                id : prova2_alternativa1
+                on_release: root.salvando_os_dados_do_usuario('a')
+                pos : (350, 350)
+            MDRaisedButton : 
+                id: prova2_alternativa2
+                on_release: root.salvando_os_dados_do_usuario('b')
+                pos : (350, 300)
+            MDRaisedButton : 
+                id: prova2_alternativa3
+                on_release: root.salvando_os_dados_do_usuario('c')
+                pos : (350, 250)
+            MDRaisedButton : 
+                id: prova2_alternativa4
+                on_release: root.salvando_os_dados_do_usuario('d')
+                pos : (350, 200)
+            MDRaisedButton : 
+                id: prova2_alternativa5
+                on_release: root.salvando_os_dados_do_usuario('e')
+                pos : (350, 150)
+
+<Prova3>:
+    on_pre_enter : root.comecando_exercicios()
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Desistir"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+        FloatLayout:
+            spacing : '20dp'
+            MDLabel :
+                pos_hint : {'center_x' : 0.5, 'center_y' : 0.9 }
+                halign : 'center'
+                height : self.texture_size[1]
+                id: prova3_enunciado
+            MDRaisedButton : 
+                id : prova3_alternativa1
+                on_release: root.salvando_os_dados_do_usuario('a')
+                pos : (350, 350)
+            MDRaisedButton : 
+                id: prova3_alternativa2
+                on_release: root.salvando_os_dados_do_usuario('b')
+                pos : (350, 300)
+            MDRaisedButton : 
+                id: prova3_alternativa3
+                on_release: root.salvando_os_dados_do_usuario('c')
+                pos : (350, 250)
+            MDRaisedButton : 
+                id: prova3_alternativa4
+                on_release: root.salvando_os_dados_do_usuario('d')
+                pos : (350, 200)
+            MDRaisedButton : 
+                id: prova3_alternativa5
+                on_release: root.salvando_os_dados_do_usuario('e')
+                pos : (350, 150)
+
+<Prova4>:
+    on_pre_enter : root.comecando_exercicios()
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Desistir"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+        FloatLayout:
+            spacing : '20dp'
+            MDLabel :
+                pos_hint : {'center_x' : 0.5, 'center_y' : 0.9 }
+                halign : 'center'
+                height : self.texture_size[1]
+                id: prova4_enunciado
+            MDRaisedButton : 
+                id : prova4_alternativa1
+                on_release: root.salvando_os_dados_do_usuario('a')
+                pos : (350, 350)
+            MDRaisedButton : 
+                id: prova4_alternativa2
+                on_release: root.salvando_os_dados_do_usuario('b')
+                pos : (350, 300)
+            MDRaisedButton : 
+                id: prova4_alternativa3
+                on_release: root.salvando_os_dados_do_usuario('c')
+                pos : (350, 250)
+            MDRaisedButton : 
+                id: prova4_alternativa4
+                on_release: root.salvando_os_dados_do_usuario('d')
+                pos : (350, 200)
+            MDRaisedButton : 
+                id: prova4_alternativa5
+                on_release: root.salvando_os_dados_do_usuario('e')
+                pos : (350, 150)
+
+<Prova5>:
+    on_pre_enter : root.comecando_exercicios()
+    BoxLayout:
+        orientation: "vertical"                
+        MDToolbar:
+            title :"Desistir"
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+        FloatLayout:
+            spacing : '20dp'
+            MDLabel :
+                pos_hint : {'center_x' : 0.5, 'center_y' : 0.9 }
+                halign : 'center'
+                height : self.texture_size[1]
+                id: prova5_enunciado
+            MDRaisedButton : 
+                id : prova5_alternativa1
+                on_release: root.salvando_os_dados_do_usuario('a')
+                pos : (350, 350)
+            MDRaisedButton : 
+                id: prova5_alternativa2
+                on_release: root.salvando_os_dados_do_usuario('b')
+                pos : (350, 300)
+            MDRaisedButton : 
+                id: prova5_alternativa3
+                on_release: root.salvando_os_dados_do_usuario('c')
+                pos : (350, 250)
+            MDRaisedButton : 
+                id: prova5_alternativa4
+                on_release: root.salvando_os_dados_do_usuario('d')
+                pos : (350, 200)
+            MDRaisedButton : 
+                id: prova5_alternativa5
+                on_release: root.salvando_os_dados_do_usuario('e')
+                pos : (350, 150)
+
+<Correcao1>:
+    on_pre_enter : root.pegando_respostas()
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : 'Corre\u00E7\u00E3o'
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'correcao2'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'correcao3'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'correcao4'
+            MDIconButton:
+                icon: "numeric-5-circle-outline"
+                on_release : app.root.current = 'correcao5'
+            MDIconButton:
+                icon: "book"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'  
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel :
+                halign : 'center'
+                height : self.texture_size[1]
+                id: enunciado1
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_marcada1
+
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_correta1   
+            
+
+<Correcao2>:
+    on_pre_enter : root.pegando_respostas()
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : 'Corre\u00E7\u00E3o'
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'correcao1'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'correcao3'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'correcao4'
+            MDIconButton:
+                icon: "numeric-5-circle-outline"
+                on_release : app.root.current = 'correcao5'
+            MDIconButton:
+                icon: "book"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'  
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel :
+                halign : 'center'
+                height : self.texture_size[1]
+                id: enunciado2
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_marcada2
+
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_correta2   
+
+<Correcao3>:
+    on_pre_enter : root.pegando_respostas()
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : 'Corre\u00E7\u00E3o'
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'correcao1'
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'correcao2'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'correcao4'
+            MDIconButton:
+                icon: "numeric-5-circle-outline"
+                on_release : app.root.current = 'correcao5'
+            MDIconButton:
+                icon: "book"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'  
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel :
+                halign : 'center'
+                height : self.texture_size[1]
+                id: enunciado3
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_marcada3
+
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_correta3   
+
+<Correcao4>:
+    on_pre_enter : root.pegando_respostas()
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : 'Corre\u00E7\u00E3o'
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'correcao1'
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'correcao2'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'correcao3'
+            MDIconButton:
+                icon: "numeric-5-circle-outline"
+                on_release : app.root.current = 'correcao5'
+            MDIconButton:
+                icon: "book"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'  
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel :
+                halign : 'center'
+                height : self.texture_size[1]
+                id: enunciado4
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_marcada4
+
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_correta4   
+
+<Correcao5>:
+    on_pre_enter : root.pegando_respostas()
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : 'Corre\u00E7\u00E3o'
+            left_action_items : [["arrow-left", lambda x : root.voltar()]]
+            MDIconButton:
+                icon: "numeric-1-circle-outline"
+                on_release : app.root.current = 'correcao1'
+            MDIconButton:
+                icon: "numeric-2-circle-outline"
+                on_release : app.root.current = 'correcao2'
+            MDIconButton:
+                icon: "numeric-3-circle-outline"
+                on_release : app.root.current = 'correcao3'
+            MDIconButton:
+                icon: "numeric-4-circle-outline"
+                on_release : app.root.current = 'correcao4'
+            MDIconButton:
+                icon: "book"
+                on_release : app.root.current = 'introducao1'
+            MDIconButton:
+                icon: "pencil-outline"
+                on_release : app.root.current = 'exercicios'  
+        BoxLayout:
+            orientation: 'vertical'
+            MDLabel :
+                halign : 'center'
+                height : self.texture_size[1]
+                id: enunciado5
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_marcada5
+
+            MDLabel:
+                halign : 'center'
+                height : self.texture_size[1]
+                id: resposta_correta5  
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+                
+
